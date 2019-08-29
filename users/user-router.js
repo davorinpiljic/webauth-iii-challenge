@@ -4,10 +4,12 @@ const bcrypt = require("bcryptjs");
 const restrictedVerify = require("../auth/restricted-middleware.js");
 
 router.get("/", restrictedVerify, async (req, res) => {
-  const users = await Users.find();
+  const department = req.user.department;
+  const users = await Users.find(department);
+
   try {
     if (users) {
-      res.status(200).json(users);
+      res.status(200).json({ users });
     } else {
       res.status(401).json({ message: "You shall not pass!" });
     }

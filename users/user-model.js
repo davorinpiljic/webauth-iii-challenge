@@ -1,4 +1,4 @@
-const db = require("../data/dbConfig.js");
+const db = require("../config/dbConfig.js");
 
 module.exports = {
   add,
@@ -9,8 +9,8 @@ module.exports = {
 function add(user) {
   return db("users").insert(user);
 }
-function find() {
-  return db("users");
+function find(department) {
+  return db("users").where({ department: department });
 }
 function findBy(username) {
   return db("users").where(username);
