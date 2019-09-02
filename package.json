@@ -1,0 +1,29 @@
+{
+  "name": "webauth-iii-challenge",
+  "version": "1.0.0",
+  "description": "- Authentication.\r - Express Middleware.\r - JSON Web Tokens (JWTs).\r - Hashing Passwords.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davorinpiljic/webauth-iii-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davorinpiljic/webauth-iii-challenge/issues"
+  },
+  "homepage": "https://github.com/davorinpiljic/webauth-iii-challenge#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.19.2",
+    "nodemon": "^1.19.1",
+    "sqlite3": "^4.1.0"
+  }
+}
